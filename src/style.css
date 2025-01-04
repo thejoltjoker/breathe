@@ -3,7 +3,7 @@
   --light: hsl(48, 31%, 97%);
   --radius-circle: 50%;
   --radius-square: 20%;
-  --size-circle: 40px;
+  --size-circle: 160px;
   --size-square: 160px;
   font-family: "Inter Variable", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
@@ -101,28 +101,41 @@ button#pwa-refresh {
   --opacity: 0.75;
   width: var(--size-circle);
   height: var(--size-circle);
+  transform: scale(0.25);
   background: var(--dark);
-  opacity: var(--opacity);
-  animation: breathe var(--duration) infinite ease;
+  opacity: 0;
+  animation: breathe var(--duration) infinite ease, fade-in 2s ease;
   animation-delay: var(--delay);
   border-radius: var(--radius-circle);
   mix-blend-mode: multiply;
   transform-origin: center;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: var(--opacity);
+  }
+}
 @keyframes breathe {
   0%,
   100% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(0.25);
     border-radius: var(--radius-circle);
+    opacity: var(--opacity);
   }
   25%,
   50% {
-    transform: rotate(90deg) scale(4);
+    transform: rotate(90deg) scale(1);
     border-radius: var(--radius-square);
+    opacity: var(--opacity);
   }
   75% {
-    transform: rotate(180deg) scale(1);
+    transform: rotate(180deg) scale(0.25);
     border-radius: var(--radius-circle);
+    opacity: var(--opacity);
   }
 }
 
