@@ -130,7 +130,7 @@ button#pwa-refresh {
   position: absolute;
   text-align: center;
   bottom: env(safe-area-inset-bottom, 0);
-  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 1rem));
   left: 0;
   width: 100%;
 }
