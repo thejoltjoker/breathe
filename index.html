@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Box Breathing</title>
+    <title>Breathe</title>
   </head>
   <body>
     <div id="app">
@@ -18,9 +18,18 @@
       <div class="box-breathing-container">
         <div class="box-breathing-box" style="--delay: 200ms"></div>
       </div>
-    </div>
-    <div class="clock-container">
-      <div class="clock-time"></div>
+      <div class="clock-container">
+        <div class="clock-time"></div>
+      </div>
+      <div id="pwa-toast" role="alert" aria-labelledby="toast-message">
+        <div class="message">
+          <span id="toast-message"></span>
+        </div>
+        <div class="buttons">
+          <button id="pwa-refresh" type="button">Reload</button>
+          <button id="pwa-close" type="button">Close</button>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
