@@ -13,7 +13,7 @@ export default defineConfig({
         short_name: "breathe",
         description: "Guided box breathing for calm and focus",
         theme_color: "#FAF9F5",
-
+        display: "standalone",
         icons: [
           {
             src: "pwa-64x64.png",
