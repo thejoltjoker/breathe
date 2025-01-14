@@ -5,8 +5,8 @@
   --radius-square: 20%;
   --size-circle: 160px;
   --size-square: 160px;
-  font-family: "Inter Variable", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: "Onest Variable", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
   font-weight: 400;
   background: var(--light);
@@ -96,7 +96,7 @@ button#pwa-refresh {
 }
 
 .box-breathing-box {
-  --duration: 12s;
+  --duration: 16s;
   --delay: 0ms;
   --opacity: 0.75;
   width: var(--size-circle);
@@ -139,23 +139,6 @@ button#pwa-refresh {
   }
 }
 
-.clock-container {
-  position: absolute;
-  text-align: center;
-  bottom: env(safe-area-inset-bottom, 0);
-  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 1rem));
-  left: 0;
-  width: 100%;
-}
-
-.clock-time {
-  color: var(--dark);
-  opacity: 0.3;
-  letter-spacing: 0.05em;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 .dark-theme {
   background: var(--dark);
   color: var(--light);
@@ -169,4 +152,19 @@ button#pwa-refresh {
     background: var(--light);
     mix-blend-mode: screen;
   }
+}
+
+.text-container {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  animation: fade-in 1s ease;
+}
+
+.hidden {
+  opacity: 0;
 }
